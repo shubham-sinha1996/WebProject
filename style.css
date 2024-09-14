@@ -11,14 +11,6 @@ body {
     border: 1px solid #ddd;
 }
 
-.page-container {
-    margin-bottom: 70px;
-}
-
-.nav {
-
-}
-
 nav {
     background-color: #222222;
     display: flex;
@@ -333,7 +325,6 @@ input[type=submit]:hover {
 }
 
 .footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     right: 0;
