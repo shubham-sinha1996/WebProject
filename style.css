@@ -12,7 +12,7 @@ body {
 }
 
 .page-container {
-
+    margin-bottom: 70px;
 }
 
 .nav {
@@ -36,7 +36,7 @@ nav .logo img {
     padding: 8px;
     width: 56px;
     height: 56px;
-    border-radius: 50%;
+    border-radius: 40%;
 }
 nav .logo .title {
     color: #ffffff;
@@ -58,16 +58,136 @@ nav ul li {
     padding: 15px 40px;
 }
 nav ul li:hover {
-    background-color: #222222;
+    background-color: #525050;
 }
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
 }
 nav ul li.active {
-    background-color: #222222;
+    background-color: #525050;
+    
 }
 
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    background-color: #E9EFEC;
+    background-image: url(//unsplash.it/900/250/?blur);
+    background-size: cover;
+    text-align: center;
+}
+@keyframes appear {
+    from {
+        opacity: 0.0;
+        top: -100px;
+    }
+    to {
+        opacity: 1.0;
+        top: 0.0;
+    }
+}
+.banner .heading {
+    flex: 1;
+    justify-self: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: #ffffff;
+    position: relative;
+    animation: appear 1s ease-in-out 0s forwards;
+}
+
+.banner .heading small {
+    font-size: 24px;
+}
+
+.maintext {
+    background-color: #eeeeee;
+    margin: 6px;
+    padding: 25px;
+}
+.subtext {
+    display: flex;
+}
+.subtext div {
+    margin: 5px;
+    padding: 15px;
+    color: #ffffff;
+    border-radius: 10px;
+}
+.subtext .grey {
+    background-color: #B6BBC4;
+}
+
+.subtext .yellow {
+    background-color: #f0a500;
+}
+.subtext .blue {
+    background-color: #40A2E3;
+}
+.subtext .green {
+    background-color: #8FD14F;
+}
+
+.quote {
+    display: block;
+    background-color: #eeeeee;
+    text-align: center;
+    font-style: italic;
+    padding: 50px;
+}
+
+.projects {
+    display: flex;
+}
+.projects .project {
+    position: relative;
+    flex-basis: 400px;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 479px;
+}
+.project h4 {
+    font-size: 15px;
+    padding: 10px;
+    margin: 6px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.project p {
+    padding: 0px 10px;
+}
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    height: 250px;
+}
+.project button{
+    position: absolute;
+    bottom: 5px;
+    background-color: #4caf50;
+    border: none;
+    padding: 12px 20px;
+    color: #ffffff;
+    border-radius: 5px;
+    width: 95%;
+    font-size: 12px;
+}
+.project button:hover{
+    background-color: #45a049;
+}
+@media all and (max-width: 1250px) {
+    .projects {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 @media all and (max-width: 800px) {
     nav {
         justify-content: flex-start;
@@ -88,6 +208,7 @@ nav ul li.active {
     nav ul {
         justify-content: center;
     }
+    
 }
 
 @media all and (max-width: 550px) {
@@ -105,7 +226,7 @@ nav ul li.active {
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     right: 0;
